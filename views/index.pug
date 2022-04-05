@@ -1,6 +1,14 @@
 extends layout
 
 block content
- h1= title
- p Spending time with nature and listening to music are my most favourite hobbies #{title}
- button(type="button",class="btn btn-primary") Primary
+  h1= title
+  p Satwika Reddy Guntipally #{title}
+  button(type="button",class="btn btn-primary",onclick="moreClaps()") Press Me
+  p 
+  div(id="target") Clap for me
+  script.
+   clap_count=0;
+   function moreClaps() {
+   clap_count=clap_count+2;
+   document.getElementById("target").innerHTML =`Clap ${clap_count} times` ;
+   } 
